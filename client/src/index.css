@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@font-face {
+    font-family:Trap-M;
+    src: url('../src/data/fonts/Trap-Medium.woff2');
+}
+
+/* ---------------------- FONTS ------------------------ */
+.Trap-M{
+    font-family:Trap-M;
+}
