@@ -43,8 +43,8 @@ const UserNavbar = () => {
 
     return (
         <>
-            <div className="w-full h-fit pt-[20px] flex items-center relative
-            max-md:px-[20px] md:px-[40px]">
+            <div className="w-full h-fit pt-[20px] flex items-center fixed top-0 left-0
+            max-md:px-[20px] md:px-[40px] bg-white/30 backdrop-blur-md pb-[20px] border-b-[1px] border-[#20202021] z-[100]">
 
                 {/* Logo */}
                 <div className="w-fit h-[30px] flex justify-center items-center gap-[7px] select-none cursor-pointer">

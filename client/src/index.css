@@ -4,7 +4,15 @@
     src: url('../src/data/fonts/Trap-Medium.woff2');
 }
 
+@font-face {
+    font-family:Trap-SB;
+    src: url('../src/data/fonts/Trap-SemiBold.woff2');
+}
+
 /* ---------------------- FONTS ------------------------ */
 .Trap-M{
     font-family:Trap-M;
+}
+.Trap-SB{
+    font-family:Trap-SB;
 }

@@ -1,4 +1,5 @@
 import UserNavbar from './components/UserNavbar'
+import SignUpLogIn from './components/SignUpLogIn'
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <div className='w-full min-h-[100dvh] flex flex-col overflow-hidden'>
         <UserNavbar/>
+        <SignUpLogIn/>
       </div>
     </>
   )
