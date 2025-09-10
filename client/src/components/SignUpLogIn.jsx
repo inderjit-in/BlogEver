@@ -4,9 +4,25 @@ const SignUpLogIn = () => {
   const divInfo = useRef()
   const [divHeight, SetdivHeight] = useState(0)
   const [ShiftSignUp, SetShiftSignUp] = useState(false)
-  
-  
+
+  const [UserData, SetUserData] = useState({
+    Name:"",
+    UserName:"",
+    Email:" ",
+    Password:"",
+  })
+
+
   // FUNCTIONS -----------------------
+
+  const UpdateUserData = (e) => {
+    const {name, value} = e.target
+    SetUserData((prevData)=>({
+      ...prevData,
+      [name]:value,
+    }))
+  }
+  
   const ChangeSignUpandSignInPage = () =>{
     if(ShiftSignUp == true){
       SetShiftSignUp(false)
@@ -93,7 +109,7 @@ const SignUpLogIn = () => {
                 {/* Full Name */}
                   <div className="w-full h-fit flex flex-col">
                     <p className="Trap-M text-[1.5rem] leading-[1.5rem] tracking-tighter pb-[7px]">Full Name</p>
-                    <input className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Text" name="Name" id="Name" placeholder="Enter Full Name Here" />
+                    <input onChange={UpdateUserData} className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Text" value={UserData.Name} name="Name" id="Name" placeholder="Enter Full Name Here" />
                   </div>
 
                 </>
@@ -107,7 +123,7 @@ const SignUpLogIn = () => {
                 {/* USer Name  */}
                   <div className="w-full h-fit flex flex-col">
                     <p className="Trap-M text-[1.5rem] leading-[1.5rem] tracking-tighter pb-[7px]">User Name</p>
-                    <input className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Text" name="UserName" id="UserName" placeholder="Enter UserName Here" />
+                    <input onChange={UpdateUserData} className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Text" value={UserData.UserName} name="UserName" id="UserName" placeholder="Enter UserName Here" />
                   </div>
 
                 </>
@@ -117,13 +133,13 @@ const SignUpLogIn = () => {
             {/* Email */}
             <div className="w-full h-fit flex flex-col">
               <p className="Trap-M text-[1.5rem] leading-[1.5rem] tracking-tighter pb-[7px]">Email</p>
-              <input className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="email" name="email" id="email" placeholder="Enter Email Here" />
+              <input onChange={UpdateUserData} className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="email" value={UserData.Email} name="Email" id="email" placeholder="Enter Email Here" />
             </div>
 
             {/* Password */}
             <div className="w-full h-fit flex flex-col">
               <p className="Trap-M text-[1.5rem] leading-[1.5rem] tracking-tighter pb-[7px]">Password</p>
-              <input className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Password" name="password" id="password" placeholder="Enter Password Here" />
+              <input onChange={UpdateUserData} className="w-full max-w-[600px] h-[45px] bg-[#f0f0f0] px-[10px] Trap-M" type="Password" value={UserData.Password} name="Password" id="password" placeholder="Enter Password Here" />
             </div>
 
           </div>
